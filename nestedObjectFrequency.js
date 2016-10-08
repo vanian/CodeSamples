@@ -1,3 +1,6 @@
+//test link https://repl.it/DrCv/2
+//find all keys in nested object of unkown depth
+//find frequency of all keys in nested object of unkown depth
 var objects = {
 	"name":"div",
 	"children":[ {"name":"div","children":[{"name":"span"},{"name":"image"}] },
