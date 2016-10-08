@@ -1,0 +1,26 @@
+//palindrome, largest sub palindrome - https://repl.it/Dbfk/0
+//palindrome
+var palindrome = function(str){
+	  if (str.split("").reverse().join("")==str){
+	  	return str.length;
+	  }
+	  else{
+	  	return 0;
+	  }
+}
+
+//largest subpal
+var max=0,temp=0, lps="";
+var largestpalindrome = function(stringa){
+	for(var i=0;i<stringa.length;i++){
+		for(var j=0;j<stringa.length;j++){
+			 max = palindrome(stringa.substring(i,j));
+			if(max>palindrome(stringa.substring(i-1,j-1))){
+				lps=stringa.substring(i,j);
+			}
+		}
+	}
+	return lps;
+}
+
+console.log(largestpalindrome("boobbbboooooobbbbbbbooooooobbbbbbboobobbbbbbbboooooooooooooobb"));
