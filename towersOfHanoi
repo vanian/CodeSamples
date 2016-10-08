@@ -1,0 +1,38 @@
+//towersOfHanoi test file - https://repl.it/Dgyo/1
+
+var hanoi = function (disc, src, aux, dst) {
+
+if (disc > 0) {
+
+hanoi(disc - 1, src, dst, aux);
+
+console.log('Move disc ' + disc +
+
+' from ' + src + ' to ' + dst);
+
+hanoi(disc - 1, aux, src, dst);
+
+}
+
+};
+
+hanoi(3, 'Src', 'Aux', 'Dst');
+
+/*It produces this solution for three discs:
+
+Move disc 1 from Src to Dst
+
+Move disc 2 from Src to Aux
+
+Move disc 1 from Dst to Aux
+
+Move disc 3 from Src to Dst
+
+Move disc 1 from Aux to Src
+
+Move disc 2 from Aux to Dst
+
+Move disc 1 from Src to Dst
+
+The hanoi function moves a stack of discs from one post to another, using the auxil-
+iary post if necessary.*/
